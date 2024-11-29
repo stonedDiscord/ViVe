@@ -20,7 +20,7 @@ jobs:
       uses: microsoft/setup-msbuild@v1.1
 
     - name: Setup .NET 4.8.1
-      run: cup -y netfx-4.8.1-devpack
+      run: choco install netfx-4.8.1-devpack
       
     - name: Build solution
       run: msbuild ViVe.sln -t:rebuild -m -property:Configuration=Release -property:DebugSymbols=false -property:DebugType=None
